@@ -20,7 +20,7 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'npm i protractor-jasmine2-html-reporter'
+    script: 'npm install protractor-jasmine2-html-reporter'
     workingDirectory: '$(Build.SourcesDirectory)'
 
 - task: CmdLine@2
