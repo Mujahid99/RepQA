@@ -15,5 +15,15 @@ steps:
 
 - task: CmdLine@2
   inputs:
+    script: 'npm install jasmine'
+    workingDirectory: '$(Build.SourcesDirectory)'
+
+- task: CmdLine@2
+  inputs:
+    script: 'npm install --save-dev jasmine-reporters@^2.0.0'
+    workingDirectory: '$(Build.SourcesDirectory)'
+
+- task: CmdLine@2
+  inputs:
     script: 'protractor conf.js'
     workingDirectory: '$(Build.SourcesDirectory)'
