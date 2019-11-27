@@ -15,15 +15,5 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'npm install jasmine'
-    workingDirectory: '$(Build.SourcesDirectory)'
-
-- task: CmdLine@2
-  inputs:
-    script: 'npm install protractor-jasmine2-html-reporter'
-    workingDirectory: '$(Build.SourcesDirectory)'
-
-- task: CmdLine@2
-  inputs:
     script: 'protractor conf.js'
     workingDirectory: '$(Build.SourcesDirectory)'
