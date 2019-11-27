@@ -14,7 +14,7 @@ export let config: Config = {
 
         'chromeOptions': {
           //args: ["disable-infobars"]
-          // args: [ "--headless", "--window-size=800,600"]
+           args: [ "--headless", "--window-size=800,600"],
           excludeSwitches: ["enable-automation"],
           useAutomationExtension: false
         },
