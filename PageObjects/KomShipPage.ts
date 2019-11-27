@@ -5,6 +5,8 @@ browser.driver.manage().window().maximize();
 browser.driver.manage().timeouts().setScriptTimeout(60000);
 browser.ignoreSynchronization = true;
 
+var EC = protractor.ExpectedConditions;
+
 export class KomShipPage {
    submitbtn =  element (by.xpath('/html/body/div[1]/div[3]/form/button[1]'));
    AddToCartbtn = element (by.xpath('/html/body/div[1]/main/div/div/div/section[3]/div/div/div[1]/div/div/div[3]/div/rp-brandcart-radios/themedirective/div/form/div[4]/button'));
@@ -34,7 +36,8 @@ clickSearch(){
 
   clickSelect(){
 
-    this.selectbtn.click();
+    browser.wait(EC.elementToBeClickable(this.selectbtn.click()), 5000);
+    //this.selectbtn.click();
     browser.sleep(3000);
   
   }
