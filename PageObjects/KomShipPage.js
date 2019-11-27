@@ -4,6 +4,7 @@ var protractor_1 = require("protractor");
 protractor_1.browser.driver.manage().window().maximize();
 protractor_1.browser.driver.manage().timeouts().setScriptTimeout(60000);
 protractor_1.browser.ignoreSynchronization = true;
+var EC = protractor_1.protractor.ExpectedConditions;
 var KomShipPage = /** @class */ (function () {
     function KomShipPage() {
         this.submitbtn = protractor_1.element(protractor_1.by.xpath('/html/body/div[1]/div[3]/form/button[1]'));
@@ -25,6 +26,7 @@ var KomShipPage = /** @class */ (function () {
         protractor_1.browser.sleep(5000);
     };
     KomShipPage.prototype.clickSelect = function () {
+        protractor_1.browser.wait(EC.elementToBeClickable(this.selectbtn), 10000);
         this.selectbtn.click();
         protractor_1.browser.sleep(3000);
     };

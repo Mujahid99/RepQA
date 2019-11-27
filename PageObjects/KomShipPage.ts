@@ -36,8 +36,8 @@ clickSearch(){
 
   clickSelect(){
 
-    browser.wait(EC.elementToBeClickable(this.selectbtn.click()), 5000);
-    //this.selectbtn.click();
+    browser.wait(EC.elementToBeClickable(this.selectbtn), 10000);
+    this.selectbtn.click();
     browser.sleep(3000);
   
   }
